@@ -11,3 +11,10 @@
 ---
 
 Note: as of now, the program doesn't log anything to your console. If you want a more verbose output, run `node index.js`
+
+## Example Next-page Selectors
+
+- Docusaurus <br/>
+  `NEXT_PAGE_SELECTOR=".pagination-nav__link.pagination-nav__link--next"`
+- Notion (provided that you've added a 'next' link to each page)<br/>
+  `NEXT_PAGE_SELECTOR='.notion-page-content div a:last-of-type[href^="/"]:not([href*="#"])'`
