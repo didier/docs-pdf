@@ -120,6 +120,8 @@ async function createPDF(page) {
   }, selector)
 
   if (nextLink) {
+    console.log(`Navigating to ${nextLink}...`)
+
     await page.goto(nextLink, {
       waitUntil: 'networkidle0'
     })
@@ -138,8 +140,7 @@ async function createPDF(page) {
       }
       scroll()
     })
-
-    console.log(`Navigated to ${nextLink}`)
+    console.log(`${nextLink} done!`)
 
     // If page has lazy loaded images, wait for them to load
     if (HAS_LAZY_LOADING) {
